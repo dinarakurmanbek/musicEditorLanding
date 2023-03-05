@@ -6,10 +6,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Music editor</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -30,12 +26,11 @@
     <section class="content-wrapper main">
         <div>
             <h1>Open source <br /> audio software</h1>
-            <p>MusicEditor allows you <br /> to edit music and sounds</p>
-            <button class="animated" data-value="START PROJECT">
+            <p>MusicEditor allows you to edit music and sounds</p>
+            <button data-value="START PROJECT">
                 START PROJECT
             </button>
         </div>
-        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_1elvfrxr.json"  background="transparent"  speed="1"  style="width: 900px; height: 900px;"  loop></lottie-player>
     </section>
     <hr />
 
@@ -71,24 +66,5 @@
         </a>
     </ul>
 </footer>
-
-<script>
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-    document.querySelector(".animated").onmouseover = event => {
-        let i = 0;
-
-        const interval = setInterval(() => {
-            event.target.innerText = event.target.innerText.split("").map( (letter,index) =>{
-                if (index <= i ) {
-                    return event.target.dataset.value[index]
-                }
-                return letters[Math.floor(Math.random() * 26)]
-            }).join("");
-            if (i >= event.target.dataset.value.length) clearInterval(interval)
-            i += 1/2;
-        }, 50)
-    }
-</script>
 </body>
 </html>
