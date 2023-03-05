@@ -77,19 +77,29 @@ nav li a {
     margin-right: 50px;
 }
 
-img {
-    width: 250px;
-    height: 300px;
-    border-radius: 50%;
-}
-
-
 .main {
     height: 90vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+.main-content {
+    width: 100%;
+    display: flex;
+}
+
+.main-content-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.main-content-right img {
+    width: 350px; 
+}
+
 .main h1 {
     font-size: 68px;
     font-weight: 400;
@@ -109,26 +119,6 @@ img {
 .doc {
     margin-top: 10px;
     max-width: 60%;
-    max-height: 400px;
-    overflow-y: auto;
-    padding-right: 20px;
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: white;
-}
-
-::-webkit-scrollbar-thumb {
-    background: gray;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: gray;
 }
 
 footer a svg {
@@ -144,4 +134,40 @@ footer a svg {
 .impressum ul li {
     opacity: 0.5;
     list-style: none;
+}
+
+@media screen and (max-width: 1024px){
+    .content-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .main-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .main-content h1 {
+        text-align: center;
+    }
+    .main-content-right, .main-content-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;  
+    }
+
+    .impressum ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .main-content-right img {
+        display:none;
+    }
 }
