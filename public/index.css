@@ -19,7 +19,7 @@ body {
 
 .content {
     flex: 1 0 auto;
-    background: linear-gradient(180deg, rgba(50,21,56,1) 0%, rgba(113,12,119,1) 89%);
+    background: linear-gradient(180deg, rgb(21, 56, 34) 0%, rgb(12, 119, 28) 89%);
 
 }
 
@@ -42,8 +42,8 @@ hr {
 
 header, footer {
     padding: 30px 100px !important;
-    background: #211E1E;
-    color: white;
+    background: white;
+    color: black;
 }
 
 .content-wrapper {
@@ -71,7 +71,7 @@ nav li {
 
 nav li a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 .logo {
     margin-right: 50px;
